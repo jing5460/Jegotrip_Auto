@@ -2,6 +2,7 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
 name: 无忧行签到
+
 on:
   schedule:
     - cron: '00 16 * * *'
@@ -33,7 +34,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install flake8 pytest requests
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
       - name: Lint with flake8
         run: |
           # stop the build if there are Python syntax errors or undefined names
